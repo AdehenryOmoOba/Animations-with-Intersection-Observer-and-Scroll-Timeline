@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,button,input{
+    font-size: 62.5%;
+    font-family:  sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.scroll-tracker{
+    height: 0.5rem;
+    width: 100%;
+    background-color: #eb7575;
+    position: fixed;
+    inset: 0rem;
+    z-index: 10;
+    transform-origin: left;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5rem;
+    height: 7rem;
+    box-shadow: 0rem 1rem 3rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.navigation{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-family: "nunito";
+}
+ul{
+    display: flex;
+    height: 7rem;
+}
+li{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+a{
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    padding-inline: 3rem;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+a:active{
+    background-color: #e7e7ed;
+}
+.logo a{
+    all: unset;
+    font-size: 3.2rem;
+    letter-spacing: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    cursor: pointer;
+}
+/* Scroll bar  */
+::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 0.1rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #eb7575;
+    border-radius: 5rem;  
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #0b025e;
+  }
+  /* //////////////////////////////////////////////////////////*/
+
+
+  /* Animation  */
+  img{
+      opacity: 1;
+  }
+  h1 span.deem-text{
+    display: inline-block;
+    opacity: 1; 
+    animation: deem-text 0.1s ease-in-out;
+  }
+  .deem-img{
+    animation: deem-img 2s ease-in-out;
+  }
+  .calculator.turn{
+      animation: calculator 2s ease-in-out;
+  }
+  .left-slide{
+    animation: h2-animate 2s ease-in-out;
+  }
+  .right-slide{
+      opacity: 0;
+    animation: p-animate 2s ease-in-out 1s forwards;
+  }
+  .h4-animate{
+    animation: h4-animate 1s ease-in-out;
+
+  }
+  .btn-animate{
+    animation: btn-animate 1s ease-in-out;
+
+  }
+
+@keyframes btn-animate{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+
+    }
+}
+@keyframes h4-animate{
+    0%{
+        transform: translateY(-5rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0rem);
+        opacity: 1;
+
+    }
+}
+@keyframes p-animate{
+    0%{
+        transform: translateX(10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+
+    }
+}
+@keyframes h2-animate{
+    0%{
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0rem);
+        opacity: 1;
+
+    }
+}
+@keyframes calculator{
+    0%{
+        transform: perspective(50rem) rotateX(45deg);
+    }
+    100%{
+        transform:perspective(50rem) rotateX(0deg);
+
+    }
+}
+@keyframes deem-img{
+    0%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes deem-text {
+    0%{
+        opacity: 0;
+    }
+    100%{
+
+        opacity: 1;
+    }
+}
+@keyframes animate-h1 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* ///// */
+
+  main{
+    min-height: 100vh;
+    width: 100vw;
+    padding-bottom: 2rem;
+  }
+  #other-pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#one{
+    justify-content: flex-start;
+    padding-top: 10rem;
+    margin-bottom: 15rem;
+    background:linear-gradient(to bottom, #d9ffff 20%, #f8ffff ,#f8ffff );
+}
+h1{
+    font-size: 6.4rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    width: 100rem;
+}
+h1 span{
+    opacity: 0;
+}
+h2{
+    font-size: 4.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+h4{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    width: 60%;
+    color: #8f8fff;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+}
+p{
+    font-size: 2rem;
+    font-weight: 600;
+}
+#one button,#two button{
+    background-color: #8f8fff;
+    color: #ffffff;
+    padding: 1.6rem 3.2rem;
+    border-radius: 3.2rem;
+    margin-bottom: 10rem;
+
+}
+#one .image-one{
+    height: max-content;
+    width: 60%;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0rem 1.6rem 4.8rem;
+
+}
+#one .image-one img{
+    width: 100%;
+    border-radius: 1rem;
+
+}
+section#two{
+    all: unset;
+   width: 70%;
+   min-height: 50rem;
+   margin-inline: auto;
+   display: flex;
+   align-items: center;
+
+}
+
+.calculator,.buy{
+    height: max-content;
+    width: max-content;
+    margin-inline: 5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+.buy{
+    box-shadow: none;
+
+}
+.calculator{
+    margin-right: 8rem;
+    border-radius: 1rem;
+
+}
+#two .calculator img{
+    border-radius: 1rem;
+}
+.buy{
+    width: 40%;
+}
+section#two p{
+    color: #8f8fff ;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+}
+#two button{
+    margin-top: 5rem;
+}
+#three,#four{
+    min-height: max-content;
+    margin: 20rem 0rem;
+    width: 100%;
+}
+input{
+    width: 28rem;
+    margin: 2rem;
+    height: 4rem;
+    border-radius: 5rem;
+    border: 0.1rem solid #b8b8ba;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+
+}
+button{
+    font-size: 1.6rem;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 600;
+    border: none;
+    padding-inline: 3rem;
+    color: blueviolet;
+}
+#login-btn{
+    background-color: blueviolet;
+    border: 0.1rem solid blueviolet;
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    color: #ffffff;
+}
+#login-btn:active{
+    background: transparent;
+    color: blueviolet;
+}
